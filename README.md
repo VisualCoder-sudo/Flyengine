@@ -17,12 +17,11 @@ Builds from **one `CMakeLists.txt` on Linux and Windows**.
 
 CMake 3.25 or newer, and a C++17 compiler (GCC 12+, Clang 15+, or MSVC 2022).
 
-raylib, Box3D and a vendored libcurl are built from the tree as part of the
-project, so there is nothing else to clone.
+Raylib, Box3D, Dear IMGUI, CURL, MiniAudio, cJSON, sqlite are already compiled directly into the engine, Meaning it can run fully standalone and doesnt require external dependencies just to function, However External plugins may still require other external dependencies
 
 #### Linux
 
-Debian/Ubuntu:
+Debian Based:
 
 ```sh
 sudo apt install build-essential cmake ninja-build pkg-config \
@@ -32,13 +31,15 @@ sudo apt install build-essential cmake ninja-build pkg-config \
 sudo apt install glslang-tools
 ```
 
-Arch:
+Arch Based (btw):
 
 ```sh
 sudo pacman -S base-devel cmake ninja pkgconf \
     alsa-lib libx11 libxrandr libxi libxcursor libxinerama libxkbcommon \
     mesa glib2 glslang
 ```
+
+Flyengine doesnt currently support Red Hat (RHEL) linux.
 
 #### Windows
 
